@@ -1,0 +1,32 @@
+initialize_system() {
+    echo "Initializing system..."
+
+    # Check and create active_logs
+    if [ ! -d "logs1" ]; then
+        echo "Creating logs1 directory..."
+        mkdir -p "logs1"
+        echo "logs1 created successfully."
+    else
+        echo "logs1 already exists. Skipping."
+    fi
+
+    # Check and create archived_logs
+    if [ ! -d "logs2" ]; then
+        echo "Creating logs2 directory..."
+        mkdir -p "archived_logs"
+        echo "logs2 created successfully."
+    else
+        echo "logs2 already exists. Skipping."
+    fi
+
+    # Check and create reports
+    if [ ! -d "reports1" ]; then
+        echo "Creating reports1 directory..."
+        mkdir -p "reports1"
+        echo "reports created successfully."
+    else
+        echo "reports1 already exists. Skipping."
+    fi
+
+    echo "System initialization complete."
+}
